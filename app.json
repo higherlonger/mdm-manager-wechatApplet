@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/checkList/checkList",
+    "pages/checkInfo/checkInfo",
+    "pages/checkDetail/checkDetail",
+    "pages/logs/logs",
+    "pages/addressBook/addressBook",
+    "pages/agreeCheck/agreeCheck",
+    "pages/notice/notice",
+    "pages/refuse/refuse",
+    "pages/launchCheck/launchCheck"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f6f6f6",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#e64340",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "icon/check.png",
+        "iconPath": "icon/check_.png",
+        "pagePath": "pages/checkList/checkList",
+        "text": "考核"
+      },
+      {
+        "selectedIconPath": "icon/book_.png",
+        "iconPath": "icon/book.png",
+        "pagePath": "pages/addressBook/addressBook",
+        "text": "通讯录"
+      }
+    ]
+  }
+}

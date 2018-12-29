@@ -1,0 +1,71 @@
+<view>
+
+  <!-- 导航栏 -->
+  <view class="nav">
+    <view class="{{selected?'active':''}}" bindtap="tabed">
+      <text>未处理</text>
+    </view>
+    <view class="{{select?'active':''}}" bindtap="tab">
+      <text>已处理</text>
+    </view>
+  </view>
+
+  <!-- 卡片 -->
+  <view class="frame {{selected? 'show':'unshow'}}">
+    <block wx:for="{{response.list}}" wx:for-item="item">
+      <view data-index="{{index}}" bindtap='toDetail' hover-class="none" wx:if="{{item.status == 0}}">
+        <view class='card'>
+          <view class="left">
+            <text class="status">状态</text> 
+            <text class="font_yellow not">未考核</text>
+          </view>
+          <view class="center">
+            <view class="content" style='border:1px solid red'>
+              <text class="name">{{item.name}}</text>
+              <text class="job">{{item.phone}}</text>
+            </view>
+            <text class="job" style='border:1px solid red'>{{item.job}}</text>
+          </view>
+          <view class="right" data-phone="{{item.phone}}" catchtap="makeCall">
+            <text class='iconfont icon-weibiaoti- phone'></text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="frame {{select? 'show':'unshow'}}">
+    <block wx:for="{{response.list}}" wx:for-item="item">
+      <view data-index="{{index}}" bindtap='toDetail' hover-class="none" wx:if="{{item.status != 0}}">
+        <view class='card'>
+          <view class="left">
+            <text class="status">状态</text>
+            <text class="font_red not" wx:if="{{item.status == 1}}">未通过</text>
+            <text class="font_green not" wx:if="{{item.status == 2}}">已通过</text>
+          </view>
+          <view class="center">
+            <view class="content">
+              <text class="name">{{item.name}}</text>
+              <text class="job">{{item.phone}}</text>
+            </view>
+            <text class="job">{{item.job}}</text>
+          </view>
+          <view class="right" data-phone="{{item.phone}}" catchtap="makeCall">
+            <text class='iconfont icon-weibiaoti- phone'></text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 悬浮 -->
+  <!-- <navigator url="../notice/notice" hover-class="none"> -->
+  <view class="upload" bindtap='toNotice'>
+    <view class='rela'>
+      <text class='iconfont icon-xiaoxi icon'></text>
+      <view class='abso'>{{Number}}</view>
+    </view>
+  </view>
+  <!-- </navigator> -->
+
+</view>

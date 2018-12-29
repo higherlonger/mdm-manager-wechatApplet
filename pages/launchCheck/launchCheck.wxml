@@ -1,0 +1,55 @@
+<!--pages/launchCheck/launchCheck.wxml-->
+<view class="frame">
+
+  <!-- 考核项目 -->
+  <view class="card">
+    <view class="time">
+      <icon class='iconfont icon-kaohejilu ver-rela'></icon>
+      <text class='timeT'>考核项目</text>
+    </view>
+
+    <picker name="picker_hx" class="cybm_pic_1" value="{{hx_index}}" data-selecthx="{{pic_array[hx_index].name}}" range="{{pic_array}}" range-key="{{'name'}}" bindchange="bindPickerChange_hx">
+      <view class="picker">
+        项目 : {{pic_array[hx_index].name}}
+      </view>
+    </picker>
+  </view>
+
+    <!-- 地点 -->
+  <view class="card">
+    <view class="time">
+      <icon class='iconfont icon-didian01 ver-rela'></icon>
+      <text class='timeT'>考核地点</text>
+    </view>
+
+    <picker name="picker_hx" class="cybm_pic_1" value="{{add_index}}" data-selecthx="{{add_array[add_index].name}}" range="{{add_array}}" range-key="{{'name'}}" bindchange="bindPickerChange_add">
+      <view class="picker">
+        地点 : {{add_array[add_index].name}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="time">
+      <icon type='waiting' size="18"></icon>
+      <text class='timeT'>考核时间</text>
+    </view>
+    <view class="section">
+      <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+        <view class="picker">
+          时间 : {{times}}
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <picker mode="date" value="{{date}}" start="1978-01-01" end="2017-1-23" bindchange="bindDateChange">
+        <view class="picker">
+          日期 : {{dates}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <button bindtap='check'>确认</button>
+
+</view>

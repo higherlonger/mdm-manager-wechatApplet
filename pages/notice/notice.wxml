@@ -1,0 +1,31 @@
+<view class="frame">
+
+  <!-- 卡片 -->
+  <block wx:for="{{response.list}}" wx:for-item="item">
+    <view class="card">
+      <view class="content">
+        <view class="left">
+          <text>状态</text>
+          <text class="status font_yellow" wx:if="{{item.status == 0}}">{{item.status_text}}</text>
+          <text class="status font_red" wx:if="{{item.status == 2}}">{{item.status_text}}</text>
+          <text class="status font_green" wx:if="{{item.status == 1}}">{{item.status_text}}</text>
+        </view>
+        <view class="right">
+          <text class="job">申请人：{{item.name}}</text>
+          <text class="job">申请岗位：{{item.job}}</text>
+          <!-- <text class="job">申请岗位：传菜员</text>
+          <text class="job">申请岗位：传菜员</text> -->
+        </view>
+      </view>
+      <view class="btn">
+        <text>{{item.time}}</text>
+        <view>
+          <text class="no" data-staffid='{{item.staffId}}' data-id='{{item.id}}' wx:if="{{item.status == 0}}" bindtap='disagree'>拒绝</text>
+          <text class="yes" data-staffid='{{item.staffId}}' data-id='{{item.id}}'  data-typeId='{{item.typeId}}' wx:if="{{item.status == 0}}" bindtap='agree'>同意</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+</view>

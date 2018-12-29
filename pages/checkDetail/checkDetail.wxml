@@ -1,0 +1,43 @@
+<view class="frame">
+
+  <!-- 资料卡片 -->
+  <view class="info">
+    <view class="left">
+      <text class='test'>考核</text>
+      <text class="job red">{{item.job}}</text>
+    </view>
+    <view class="right">
+      <view class="title">
+        <text class="name">{{item.name}}</text>
+        <text class="grey">{{item.department}}</text>
+      </view>
+      <text class="grey">{{item.entryTime}}</text>
+      <text class="grey">{{item.applyTime}}</text>
+      <text class="grey">{{item.checkTime}}</text>
+    </view>
+  </view>
+
+  <!-- 考核列表 -->
+  <view class="detail">
+    <block wx:for="{{item.detail}}" wx:for-item="list" wx:for-index="index">
+      <text class='type'>{{list.type}}</text>
+      <block wx:for="{{list.list}}" wx:for-item="list_item" wx:for-index="idx">
+        <view>
+          <view class="line" data-index='{{index}}' data-idx='{{idx}}' bindtap='isOpen'>
+            <view>
+              <text class='iconfont icon-xiajiantou icon' wx:if="{{list_item.hidden == false}}"></text>
+              <text class='iconfont icon-youjiantou icon' wx:else></text>
+              <text class="text">{{list_item.title}}</text>
+            </view>
+            <text class='iconfont icon-cha cha red'  wx:if="{{item.status == '0'}}" bindtap='checkRefuse'></text>
+          </view>
+          <view class="content" wx:if="{{list_item.hidden == false}}">
+            <text>{{list_item.des}}</text>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+
+  <button bindtap='checkPass' wx:if="{{item.status == '0'}}">完成</button>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/refuse/refuse.wxml-->
+ <!-- 内容列表 start  -->
+<view class="bc_white margin-top-10 padding-10 border-rad-10 margin-btm-10">
+  <view>
+    <icon class='ver-center ver-rela' type='warn' size='20'></icon>
+    <text class='margin-lft-10 font_18'>拒绝理由</text>
+  </view>
+  <view class='padding-10'>
+    <textarea class='font_16' placeholder='请输入拒绝理由'  bindinput="getRefuse"></textarea>
+  </view>
+</view>
+<button class='btn font_white' bindtap='checkRefuse'>确认</button>
+ <!-- 内容列表 end  -->
+
+ 

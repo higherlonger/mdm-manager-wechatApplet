@@ -1,0 +1,51 @@
+@import "../../icon.wxss";
+page{
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}
+.frame{
+  width: 100%;
+}
+.card{
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.card .timeT{
+  margin-left: 20rpx;
+  position: relative;
+  top:-5rpx;
+  font-size: 36rpx;
+}
+.card .time{
+  margin-bottom: 20rpx;
+}
+.section{
+   margin:20rpx 0;
+}
+button{
+  margin-top: 60rpx;
+  border:none;
+  background-color: #e64340;
+  color: white;
+  font-size: 36rpx;
+}
+.icon-didian01 {
+  font-size: 44rpx;
+  color: #888888;
+  margin-left: -6rpx;
+}
+.ver-rela {
+  position: relative;
+  top: -4rpx;
+}
+.icon-kaohejilu {
+  font-size: 36rpx;
+  color: #E64340;
+}

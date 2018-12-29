@@ -1,0 +1,128 @@
+@import "../../icon.wxss";
+
+page {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.nav {
+  height: 100rpx;
+  background-color: white;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.nav view {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+}
+
+.nav .active {
+  border-bottom: 1px solid #e64340;
+  color: #e64340;
+}
+
+.show {
+  display: block;
+}
+.font_red {
+  color: #E64340;
+}
+.font_yellow {
+  color: #FCA12C;
+}
+.font_green {
+  color: #09BB07;
+}
+.unshow {
+  display: none;
+}
+.frame{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.card{
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.card .left{
+  flex: 0.25;
+  border-right: 1px solid #b2b2b2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.phone{
+  font-size: 60rpx;
+  color: #e64340;
+}
+.card .left .not{
+  font-size: 36rpx;
+}
+.card .left .status{
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+}
+.card .center{
+  flex:0.65;
+  padding-left: 30rpx;
+}
+.card .center .content{
+  margin-bottom: 20rpx;
+}
+.card .center .name{
+  margin-right: 20rpx;
+  font-size: 36rpx;
+}
+.card .center .job{
+  font-size: 32rpx;
+}
+.card .right{
+  flex:0.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.upload {
+  position: fixed;
+  bottom: 250rpx;
+  right: 60rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #e64340;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload .rela {
+  position: relative;
+}
+.upload .icon{
+  font-size: 60rpx;
+}
+.upload .abso {
+  position: absolute;
+  top: -24rpx;
+  right: -24rpx;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background: #ff8c05;
+  font-size: 24rpx;
+  text-align: center;
+}

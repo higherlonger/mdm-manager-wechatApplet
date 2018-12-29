@@ -1,0 +1,37 @@
+<view class="flex box box-lr">
+  <scroll-view class="flex groups box box-tb" scroll-y="true" scroll-into-view="{{scrollIntoView}}">
+    <block wx:for="{{response.list}}" wx:for-item="group" wx:for-index="index">
+      <view class="flex" id="{{group.groupName}}">
+        <view class="group-name">{{group.groupName}}</view>
+        <view class="flex group-users">
+          <view wx:for="{{group.users}}" wx:for-item="user" wx:for-index="idx" class="user box box-lr "  data-index="{{index}}" data-idx="{{idx}}" bindtap='launchCheck'>
+             <view class='flex-row flex-item pos-rela'> 
+              <view class='flex-row bc_white'>
+                <view class='box border-half bc-grey margin-rgt-10 flex-center'><text class='font_18 font-white text-group'>{{group.groupName}}</text></view>
+                <text class='flex-center'>{{user.name}}</text>
+              </view>
+              <view class='wrap'>
+                <text class='font-16 tet'>{{user.job}}</text>
+                <icon class='ver-middle margin-lft-10 iconfont icon-weibiaoti-' data-phone="{{user.phone}}" catchtap="makeCall"></icon>
+              </view>
+            </view>
+            <!--这里是左滑按钮部分----start-->
+            <!-- <view class='pos-abso bc_red btn font-white' data-index="{{index}}" data-idx="{{idx}}" bindtap='launchCheck'>
+              <text class='font-16'>发起考核</text>
+            </view> -->
+                <!--这里是左滑按钮部分----end-->
+          </view>
+          
+        </view>
+       </view> 
+    </block>
+  </scroll-view>
+
+  <view class="nav box box-tb" bindtouchmove="touchmove" bindtouchcancel="touchcancel" bindtouchend="touchend">
+    <view bindtap="tabLetter" data-index="{{item}}" wx:for="{{letters}}" class="flex box box-align-center box-pack-center letter">
+      <text class="letter-text {{selected == item ? 'letter-actived' : ''}}">{{item}}</text>
+    </view>
+  </view>
+</view>
+
+

@@ -1,0 +1,121 @@
+@import "../../icon.wxss";
+
+page{
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 30rpx; 
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 32rpx;
+}
+.show{
+  display: block;
+}
+.unshow{
+  display: none;
+}
+.frame{
+  width: 100%;
+}
+.grey{
+  color: #888888;
+}
+.yellow{
+  color: #FF9966;
+}
+.red{
+  color: #e64340;
+}
+.info{
+  background-color: white;
+  border-radius: 20rpx;
+  margin-top:20rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.info .left{
+  flex: 0.25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.info .left .job{
+  font-size: 36rpx;
+}
+.info .left .test{
+  margin-bottom: 60rpx;
+}
+.info .right{
+    border-left: 1px solid #b2b2b2;
+  flex: 0.75;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; 
+  flex-direction: column;
+  padding-left: 30rpx;
+}
+.info .title {
+  margin-bottom: 20rpx;
+}
+.info .title .name{
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+.info .right>text{
+  margin-bottom: 10rpx;
+}
+.detail{
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+.detail .type{
+  display: inline-block;
+  font-size: 36rpx;
+  color: #FF9966;
+  margin-top: 20rpx; 
+}
+.detail .line{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1px solid #f2f2f2;
+}
+.detail .line .text{
+  margin-left: 20rpx;
+}
+.detail .content{
+  padding: 20rpx 20rpx 0 20rpx;
+  color: #888888;
+  font-size: 32rpx;
+}
+.line .icon{
+  font-size: 42rpx;
+  vertical-align: middle; 
+}
+.line .cha{
+  font-size: 42rpx;
+}
+button{
+  margin: 60rpx 0;
+  border:none;
+  background-color: #e64340;
+  color: white;
+  font-size: 36rpx;
+}
